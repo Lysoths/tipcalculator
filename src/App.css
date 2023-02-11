@@ -49,7 +49,7 @@
   width: 12px;
   height: 15px;
   position: absolute;
-  bottom: 8px;
+  bottom: 9px;
   left: 10px;
 }
 
@@ -140,7 +140,7 @@ input::-webkit-inner-spin-button {
   height: 15px;
   position: absolute;
   left: 10px;
-  bottom: 7px;
+  bottom: 9px;
 }
 
 .right-side {
