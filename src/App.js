@@ -7,6 +7,7 @@ function App() {
   const [bill, setBill] = useState();
   const [total, setTotal] = useState();
   const [chooseTip, setChooseTip] = useState();
+  const [personTip, setPersonTip] = useState();
 
   const handleBill = (e) => {
     let bill = parseFloat(e.target.value);
@@ -38,10 +39,12 @@ function App() {
       parseFloat(e.target.value).toString() === "NaN" ||
       e.target.value === "0"
     ) {
+      setPersonTip(0);
+      setTotal(0);
       return false;
     } else {
       let ex = chooseTip;
-      setChooseTip(ex / e.target.value);
+      setPersonTip(ex / e.target.value);
       setTotal(chooseTip + bill);
     }
   };
@@ -115,7 +118,7 @@ function App() {
               <div className='price1'>
                 <p className='money'>
                   {" "}
-                  {chooseTip ? `$${chooseTip}` : "$0.00"}
+                  {personTip ? `$${personTip}` : "$0.00"}
                 </p>
               </div>
             </div>
